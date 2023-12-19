@@ -5,6 +5,6 @@ hospitals from Sao Paulo, Brazil. The dataset can be accessed through the link b
 
 www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset
 
-All the CNN architecture testedwhich includes; CustomCNN, MoblileNetV1, DenseNet169 and ResNet50,achieved an accuracy of over 93% on the test set. Furthermore, 
+All the CNN architecture tested which includes; CustomCNN, MoblileNetV1, DenseNet169 and ResNet50,achieved an accuracy of over 93% on the test set. Furthermore, 
 an ensemble  of all the models achieved an accuracy of 99%.
 
