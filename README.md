@@ -71,6 +71,8 @@ The evaluation of five CNN-based models—CustomCNN, MobileNetV2, DenseNet169, R
 
 Below is a summary of the final performance metrics for each model:
 
+<div align="center">
+
 | Model       | Training Accuracy | Test Accuracy | Test Loss | Sensitivity | Specificity |
 |-------------|-------------------|---------------|-----------|-------------|-------------|
 | CustomCNN   | ~94%              | ~93%          | ~0.20     | 97%         | 91%         |
@@ -78,6 +80,8 @@ Below is a summary of the final performance metrics for each model:
 | DenseNet169 | ~96%              | ~95%          | ~0.15     | 97%         | 93%         |
 | ResNet50    | ~96%              | ~95%          | ~0.13     | 98%         | 94%         |
 | Ensemble    | -                 | 99%           | 0.05      | 99%         | 99%         |
+
+</div>
 
 
 
