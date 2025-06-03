@@ -113,14 +113,26 @@ The results show a clear trend: as model complexity increased, performance impro
 ![Figure 1: Age distribution](customCNN_confusion.png)
 
 MobileNetV2 outperformed CustomCNN across all metrics with only a slight increase in complexity. With a test accuracy of 94%, loss of 0.18, and a good balance between sensitivity and specificity (96% and 92%, respectively), it demonstrates the benefits of architectural efficiency. Given its low memory and computational demands, MobileNetV2 is highly promising for real-time COVID-19 detection in mobile health applications, especially in rural or under-resourced regions.
+![Figure 1: Age distribution](MobileNetV2_Accuracy.png)
+![Figure 1: Age distribution](MobileNetV2_loss.png)
+![Figure 1: Age distribution](MobileNetV2_confusion.png)
 
 DenseNet169 and ResNet50 both achieved 95% test accuracy, but ResNet50 edged ahead in both sensitivity and specificity. DenseNet’s dense connectivity pattern helped preserve and propagate gradients, allowing for better feature reuse and less vanishing during backpropagation. This helped it maintain a low test loss of 0.15 and high sensitivity of 97%. Still, it required significantly more computational resources, with long training times and higher GPU memory usage.
 
+![Figure 1: Age distribution](DenseNet169_accuracy.png)
+![Figure 1: Age distribution](DenseNet169_loss.png)
+![Figure 1: Age distribution](DenseNet169_confusion.png)
+
 ResNet50, utilizing residual skip connections to simplify learning, showed superior diagnostic reliability. With a test loss of only 0.13, sensitivity of 98%, and specificity of 94%, it produced the most confident and stable predictions among the single models. The ability of ResNet to mitigate vanishing gradients with depth enabled it to abstract more complex lung tissue patterns, giving it an edge in medical feature interpretation.
+![Figure 1: Age distribution](ResNet50_accuracy.png)
+![Figure 1: Age distribution](ResNet50_loss.png)
+![Figure 1: Age distribution](ResNet50_confusion.png)
 
 Perhaps the most important result lies in the ensemble model. By aggregating the outputs of the four individual models, the ensemble achieved an impressive 99% accuracy on the test set, with nearly perfect sensitivity and specificity. This dramatic improvement underscores the value of combining diverse model perspectives, especially in a sensitive domain like medical imaging. The reduction in false negatives (undetected COVID cases) and false positives (misclassified healthy cases) is particularly critical in real-world diagnostics, where both outcomes carry significant risk.
 
 The ensemble’s low test loss of 0.05 confirms its robust confidence in predictions. In practical terms, this means it makes fewer high-confidence incorrect decisions, an important factor in clinical acceptance. The success of this model supports the notion that even if individual models have minor weaknesses, their collective decision-making leads to more reliable and generalized outputs.
+
+![Figure 1: Age distribution](Ensemble.png)
 
 Training curves across all models show steady convergence with minimal signs of overfitting. Early stopping and dropout layers helped stabilize training. In particular, CustomCNN and MobileNetV2 converged quickly, while DenseNet and ResNet required more epochs but eventually achieved smoother validation trajectories, indicating stable learning of increasingly complex patterns.
 
