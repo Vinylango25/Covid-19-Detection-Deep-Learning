@@ -108,6 +108,9 @@ Below is a summary of the final performance metrics for each model:
 
 
 The results show a clear trend: as model complexity increased, performance improved—but with diminishing returns past a certain point. The CustomCNN, while the simplest in design, offered respectable performance. Achieving 93% test accuracy with a sensitivity of 97% and specificity of 91%, it shows that even relatively shallow networks can perform well when trained on well-curated, balanced datasets. However, the higher test loss indicates greater prediction uncertainty compared to deeper models.
+![Figure 1: Age distribution](customCNN_accuracy.png)
+![Figure 1: Age distribution](customCNN_loss.png)
+![Figure 1: Age distribution](customCNN_confusion.png)
 
 MobileNetV2 outperformed CustomCNN across all metrics with only a slight increase in complexity. With a test accuracy of 94%, loss of 0.18, and a good balance between sensitivity and specificity (96% and 92%, respectively), it demonstrates the benefits of architectural efficiency. Given its low memory and computational demands, MobileNetV2 is highly promising for real-time COVID-19 detection in mobile health applications, especially in rural or under-resourced regions.
 
