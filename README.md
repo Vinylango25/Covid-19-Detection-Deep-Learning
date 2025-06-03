@@ -39,6 +39,8 @@ The broader goal of this research is to develop a scalable, efficient, and relia
 
 This study utilizes the **SARS-CoV-2 CT scan dataset**, a publicly available resource hosted on [Kaggle](https://www.kaggle.com/datasets/plameneduardo/sarscov2-ctscan-dataset). The dataset consists of a total of **2,482 CT scan images**, evenly split between **1,252 COVID-19 positive cases** and **1,230 negative cases**. These images were collected from real patients at hospitals in **São Paulo, Brazil**, and manually labeled by medical professionals. The balanced nature of this dataset provides an ideal foundation for training deep learning models, minimizing the risks of bias toward one class and ensuring a fair evaluation of classification performance.
 
+![Figure 1: Age distribution](sample.png)
+
 Before training, several preprocessing steps were performed to prepare the dataset for input into the CNN models. All CT images were **resized to a consistent resolution**, and pixel values were **normalized** to standardize contrast and intensity levels across the dataset. The data was then **randomly split into training, validation, and test sets** to allow for robust model training and unbiased evaluation. Data augmentation techniques such as horizontal flipping and rotation were also applied to increase the dataset's diversity and help models generalize better to unseen data.
 
 You can access and explore the dataset directly from Kaggle via the following link:  
@@ -69,6 +71,8 @@ Convolutional Neural Networks (CNNs) are a specialized class of deep neural netw
 A typical CNN architecture consists of several key components: **convolutional layers**, **activation functions**, **pooling layers**, **batch normalization**, **dropout**, and **fully connected (dense) layers**. The convolutional layers apply a set of filters (kernels) that slide over the input image to detect low-level features such as edges and gradients. These features are stored in feature maps that retain spatial information, which is essential for identifying regions affected by diseases like COVID-19.
 
 Following the convolution operation, **activation functions** like ReLU (Rectified Linear Unit) are used to introduce non-linearity into the model. Without these functions, the network would behave like a linear classifier, limiting its ability to learn complex representations. **Pooling layers**, such as max pooling, are then used to reduce the spatial dimensions of feature maps. This not only reduces computational complexity but also helps the model become more robust to slight translations and distortions in the input images.
+
+![Figure 1: Age distribution](architecture.png)
 
 To stabilize and accelerate training, **batch normalization** is applied, normalizing the output of previous layers and maintaining a stable distribution of activations. Additionally, **dropout layers** are used to prevent overfitting by randomly deactivating a subset of neurons during training, forcing the network to learn more robust, distributed representations. Finally, the network's output is passed through one or more **fully connected layers**, culminating in a classification layer—typically using a softmax or sigmoid function depending on the task.
 
