@@ -44,6 +44,24 @@ Before training, several preprocessing steps were performed to prepare the datas
 You can access and explore the dataset directly from Kaggle via the following link:  
 🔗 [SARS-CoV-2 CT Scan Dataset on Kaggle](https://www.kaggle.com/datasets/plameneduardo/sarscov2-ctscan-dataset)
 
+## Tools Used
+
+This project leverages a variety of tools and libraries to build, train, and evaluate deep learning models for COVID-19 detection from CT scan images:
+
+- **Python 3.8+** — The primary programming language used for data processing, model development, and evaluation.
+- **TensorFlow / Keras** — Deep learning frameworks utilized for building and training the CNN architectures including CustomCNN, MobileNetV2, DenseNet169, and ResNet50.
+- **NumPy** — For efficient numerical computations and array manipulations.
+- **Pandas** — Data manipulation and management, especially for organizing metadata and results.
+- **Matplotlib & Seaborn** — Visualization libraries used to plot training curves, confusion matrices, and other performance metrics.
+- **scikit-learn** — For computing evaluation metrics such as accuracy, sensitivity, specificity, and generating confusion matrices.
+- **OpenCV / PIL** — Image processing libraries for preprocessing CT scans including resizing and normalization.
+- **Jupyter Notebook** — Development environment for interactive experimentation and visualization of results.
+- **Kaggle** — Source platform for the SARS-CoV-2 CT scan dataset used in this study.
+- **Git & GitHub** — Version control and collaborative platform for code management and sharing.
+
+These tools collectively enabled efficient experimentation, reproducible workflows, and clear presentation of results.
+
+
 ## Model Architectures
 
 Convolutional Neural Networks (CNNs) are a specialized class of deep neural networks designed to process and analyze visual data. Unlike traditional fully connected neural networks, CNNs exploit the spatial structure of images through local connections and shared weights, making them more efficient and effective for image classification tasks. CNNs have been instrumental in advancing the field of medical imaging, where high-resolution and complex patterns need to be interpreted accurately—particularly relevant for detecting COVID-19 through CT scans.
